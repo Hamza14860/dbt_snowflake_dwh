@@ -1,0 +1,6 @@
+
+version: 2
+
+models:
+    - name: dim_customers_old
+      description: "This model has multiple CTEs. which selects, aggregates, joins few tables and makes a table in RAW.DBT_HAZAM.DIM_CUSOMERS. Also note that if you do not provide the config block with materiazed as table then by default model will create a table in snow flake. We have done all of this however its better that one model should not have multiple CTEs. That breaks modularity concept. So its better if you build multiple models. e.g stg_cust, stg_order, then dim_customers"
