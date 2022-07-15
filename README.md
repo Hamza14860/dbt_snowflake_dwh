@@ -7,14 +7,10 @@
 - Generic Tests like not_null and unique applied on both sources and models
 - Singular specific Test applied on stg_payments
 
-Welcome to your new dbt project!
-
-### Using the starter project
 
 Try running the following commands:
 - dbt run
 - dbt test
-
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
