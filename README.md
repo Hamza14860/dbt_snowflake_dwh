@@ -15,7 +15,7 @@ Try running the following commands:
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
 
 
-###DBT With Snowflake
+### DBT With Snowflake
 - Staging models made (stg_orders, stg_customers, stg_payments) from source raw tables
 - Core Models made (fct_orders, dim_customers) by using and transforming the staging models
 - Materliazation of models done as table or view
