@@ -1,0 +1,28 @@
+#Build in the names of our columns or our tables (sources)
+#loaded_at_field: timestamp you get from your loader tool (loaded at timestamp from our elt tool). _etl_loaded_at is the column which contains timestamp in orders and customers table
+#warning will just tell you that your data is going stale. After 12 hours
+#error will stop anything after the source freshness command from running. e.g if data is 24 hrs old you dont want to run any other commands
+#testing also applied on sources. Gives us confidence on the raw data we are building on
+version: 2
+
+sources:
+  - name: metro_shop
+    database: raw
+    schema: jaffle_shop
+    tables:
+      - name: customers
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+      - name: orders
+        columns:
+          - name: id
+            tests:
+              - unique              
+              - not_null
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 864, period: hour}

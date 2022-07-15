@@ -6,8 +6,11 @@ with customers as (
         first_name,
         last_name
 
-    from raw.jaffle_shop.customers
+    --direct table name
+    --from raw.jaffle_shop.customers
 
+    -- using sources, after adding this, sources show in lineage
+    from {{ source('metro_shop', 'customers') }} --source name , table name
 )
 
 select * from customers

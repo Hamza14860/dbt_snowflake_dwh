@@ -7,8 +7,8 @@ with orders as (
         order_date,
         status
 
-    from raw.jaffle_shop.orders
-
+    --from raw.jaffle_shop.orders
+    from {{ source('metro_shop', 'orders') }} --using sources
 )
 
 select * from orders
