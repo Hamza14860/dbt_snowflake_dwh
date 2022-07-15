@@ -6,7 +6,7 @@
 - Sources made to document raw tables and visualize them in DAG
 - Generic Tests like not_null and unique applied on both sources and models
 - Singular specific Test applied on stg_payments
-
+- Documentation for models, sources and their columns
 
 Try running the following commands:
 - dbt run
