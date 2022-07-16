@@ -1,4 +1,4 @@
-### DBT With Snowflake
+### DBT Cloud With Snowflake
 - Staging models made (stg_orders, stg_customers, stg_payments) from source raw tables
 - Core Models made (fct_orders, dim_customers) by using and transforming the staging models
 - Materliazation of models done as table or view
@@ -7,6 +7,8 @@
 - Generic Tests like not_null and unique applied on both sources and models
 - Singular specific Test applied on stg_payments
 - Documentation for models, sources and their columns
+- Deployment environment setup
+- DBT job setup with different dbt commands to run on schedule
 
 Try running the following commands:
 - dbt run
